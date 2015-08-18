@@ -58,6 +58,7 @@ ul, ul li{
 .t2{text-indent: 2em;}
 .lh16{line-height: 16px;}
 .lh27{line-height: 27px;}
+.lh32{line-height: 32px;}
 .lh100{line-height: 100%;}
 .lh150{line-height: 150%;}
 .lh200{line-height: 200%;}
@@ -186,6 +187,7 @@ ul, ul li{
 .mt6{margin-top: 6px;}
 .mt7{margin-top: 7px;}
 .mt8{margin-top: 8px;}
+.mt10{margin-top: 10px;}
 .mt11{margin-top: 11px;}
 .mt12{margin-top: 12px;}
 .mt13{margin-top: 13px;}
