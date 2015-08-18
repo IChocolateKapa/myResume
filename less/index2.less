@@ -1,0 +1,200 @@
+
+@charset "utf8";
+
+@import "Functions";
+
+.bgd1{
+  //background: #f9f7ac;
+  background: #00c0e4;
+}
+.bgd2{
+  background: #5bd999;
+  //background: #0e7ac3;
+}
+.bgd3{
+  background: #7658f8;
+  //background: #8f44ad;
+}
+.bgd4{
+  background: #d55401;
+}
+.bgd5{
+  background: #e6567a;
+  //background: #c1392b;
+}
+.bgd6{
+  background: #cb70d7;
+  //background: #2d3e50;
+}
+
+.pageSection{
+  padding: 60px;
+}
+.curr{
+  z-index: 10;
+}
+
+/*body{
+  background: rgb(34, 188, 175);
+  //overflow: hidden;
+}*/
+.main{
+  height: ~'calc(100% - 60px)';
+  min-width: 450px;
+}
+
+
+.sideBar{
+  z-index: 100;
+  width: 15%;
+  background: #1e3e57;
+}
+
+@sideBarClor: #c14749;
+@sideBarBtnSize: 50px;
+
+/*左侧*/
+.budianDlg{
+  padding: 10px;
+  left: 0;
+  .transition-org(all .2s linear .1s);
+  .contact{
+    display: block;
+    width: 88%;
+    line-height: @sideBarBtnSize;
+    background: @sideBarClor;
+    text-indent: 10px;
+  }
+  a{
+    display: block;
+    width: 76%;
+    background: @sideBarClor;
+    margin-top: 5px;
+    line-height: @sideBarBtnSize;
+    vertical-align: middle;
+    margin-left: calc(88% - 76%);
+    &:hover{
+      background: rgba(193, 71, 73, .9);
+    }
+  }
+}
+
+
+
+/*右侧*/
+.slide{
+  width: 85%;
+  //width: 100%;
+  &:hover{
+    .slider-prev,
+    .slider-next{
+      opacity: 1;
+    }
+  }
+}
+
+.slide,
+.sideBar{
+  margin-top: 60px;
+}
+
+
+.List{
+  left: 0;
+  .transform(translate(0));
+  .transition-org(all .2s linear .1s);
+
+}
+.ListItem{
+  z-index: 0;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  .transition-org(all .2s linear);
+  &.curr{
+    opacity: 1;
+    z-index: 1;
+  }
+  &:nth-of-type(1) img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0 2px 2px rgba(255,255,255,.9), 0 2px 2px rgba(0,0,0,.1)inset, 0 0 0 8px rgba(255,255,255,.9);
+  }
+
+  .ListItem-content{
+    height: 40%;
+    min-height: 400px;
+    margin-top: 15%;/*发现top值是剩余(100% - 40%)/2*/
+  }
+}
+
+
+
+@trigerSize: 30px;
+@trigerTop: 10px;
+.slideTrigger{
+  width: @trigerSize;
+  margin: 0 auto;
+  right: @trigerSize;
+  ul{
+    height: 6*@trigerTop + @trigerSize*6;
+    width: @trigerSize;
+    top: 50%;
+    margin-top: -6*@trigerTop/2 - @trigerSize*6/2;
+  }
+  li{
+    margin-top: @trigerTop;
+    a{
+      width: @trigerSize;
+      line-height: @trigerSize;
+      border: transparent;
+      .border-radius(50%);
+      background: rgba(255, 255, 255, .3);
+      .transition-org(all .2s linear .1s);
+      &:hover{
+        color: #fff;
+      }
+    }
+  }
+  li.curr a{
+    background: @sideBarClor;
+    color: #fff;
+  }
+}
+
+
+@prev-nextW: 100%;
+@prev-nextH: 60px;
+.slider-next,
+.slider-prev{
+  width: @prev-nextW;
+  line-height: @prev-nextH;
+  opacity: 0;
+  z-index: 4;
+  left: 50%;
+  margin-left:  -@prev-nextW/2;//不能有空格
+  .transition-org( all .1s linear);
+  background: rgba(0,0,0,0.2);
+}
+
+.slider-prev{
+  top: 0;
+}
+.slider-next{
+  bottom: 0;
+}
+.ctl-btn{
+  width: 100px;
+  line-height: 80px;
+  background: rgba(0, 0, 0, 0.2);
+  top: 70px;
+  left: 20px;
+  z-index: 99;
+  color: #999;
+  &:hover{
+    color: #fff;
+  }
+
+}
+
