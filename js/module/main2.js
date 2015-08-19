@@ -20,6 +20,8 @@ require(['jquery', 'indexApp', 'event'], function($, iApp, EV){
 
 
     $(function(){
+
+
         var slideTime;
         $(".slideTrigger li").mouseenter(function(){
             indexApp.clearAutoPlayTimer();
