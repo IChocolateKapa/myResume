@@ -89,6 +89,10 @@ require(['jquery', 'indexApp', 'event', 'watFal'], function($, iApp, EV, wf){
 
     })
 
+    /*在项目经验中需要取消鼠标滚轮的事件冒泡*/
+    $(".projects").on("mousewheel DOMMouseScroll", function(e){
+        eve.stopPropagation(event);
+    })
     $(".slide").on("mousewheel DOMMouseScroll", MouseWheelHandler);
 
     function MouseWheelHandler(e){
