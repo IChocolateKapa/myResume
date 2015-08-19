@@ -117,6 +117,7 @@ ul, ul li{
 .w_70{width: 70%;}
 .w_80{width: 80%;}
 .w_90{width: 90%;}
+.w_95{width: 95%;}
 .w_100{width: 100%;}
 .w110{width: 110px;}
 .w168{width: 168px;}
@@ -131,7 +132,22 @@ ul, ul li{
 .w386{width: 386px;}
 .h386{height: 386px;}
 .h440{height: 440px;}
+.h_10{height: 10%;}
+.h_20{height: 20%;}
+.h_30{height: 30%;}
+.h_40{height: 40%;}
+.h_50{height: 50%;}
+.h_60{height: 60%;}
+.h_70{height: 70%;}
+.h_80{height: 80%;}
+.h_90{height: 90%;}
+.h_95{height: 95%;}
 .h_100{height: 100%;}
+.h_150{height: 150%;}
+.h_200{height: 200%;}
+.h_220{height: 220%;}
+.h_290{height: 290%;}
+.h_400{height: 400%;}
 .w16{width: 16px;}
 .h16{height: 16px;}
 .h22{height: 22px;}
@@ -206,6 +222,7 @@ ul, ul li{
 .mt26{margin-top: 26px;}
 .mt32{margin-top: 33px;}
 .mt49{margin-top: 49px;}
+.mt120{margin-top: 120px;}
 .ml-1{margin-left: -1px;}
 .ml5{margin-left: 5px;}
 .ml7{margin-left: 7.3px;}
@@ -215,3 +232,4 @@ ul, ul li{
 .overHid{overflow: hidden;}
 
 .txtInt20{text-indent: 20px;}
+.brword{word-break: break-all;}
