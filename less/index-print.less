@@ -113,6 +113,11 @@
   left: 0;
   .transition-org(all .2s linear .1s);
 }
+
+.sideBar{
+  height: 2500px;
+}
+
 .ListItem{
   position: relative;
   float: left;
@@ -120,6 +125,13 @@
   top: 0;
   left: 0;
   opacity: 1;
+
+  &:nth-of-type(1){
+    height: 580px;
+  }
+  &:nth-of-type(2){
+    height: 1920px;
+  }
 
   .ListItem-content{
     height: 40%;
