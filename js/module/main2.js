@@ -93,6 +93,7 @@ require(['jquery', 'indexApp', 'event', 'watFal'], function($, iApp, EV, wf){
     $(".projects").on("mousewheel DOMMouseScroll", function(e){
         eve.stopPropagation(event);
     })
+
     $(".slide").on("mousewheel DOMMouseScroll", MouseWheelHandler);
 
     function MouseWheelHandler(e){
