@@ -75,3 +75,22 @@
   -o-transition: @trans;
 }
 /* -- 过渡 结束 -- */
+
+
+/*多列布局*/
+
+.columnCount(@n){
+  column-count: @n;
+  -webkit-column-count: @n;
+  -moz-column-count: @n;
+}
+
+.columnWidth(@w){
+  column-width: @w;
+  -webkit-column-width: @w;
+  -moz-column-width: @w;
+}
+.columnRule(){
+  column-rule-color: red;
+  -webkit-column-rule-color: red;
+}

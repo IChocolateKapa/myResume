@@ -107,8 +107,16 @@ ul, ul li{
 .zIndex90{z-index: 90;}
 
 /*长宽*/
-.w_40{width: 43.5%;}
+.w_10{width: 10%;}
+.w_20{width: 20%;}
+.w_30{width: 30%;}
+.w_40{width: 40%;}
 .w_50{width: 50%;}
+.w_60{width: 60%;}
+.w_65{width: 65%;}
+.w_70{width: 70%;}
+.w_80{width: 80%;}
+.w_90{width: 90%;}
 .w_100{width: 100%;}
 .w110{width: 110px;}
 .w168{width: 168px;}
@@ -205,3 +213,5 @@ ul, ul li{
 .tp0{top: 0;}
 
 .overHid{overflow: hidden;}
+
+.txtInt20{text-indent: 20px;}

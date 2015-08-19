@@ -48,7 +48,7 @@ define(['jquery', 'event'], function($, e){
             var $this = this;
             this.globalSlide = window.setInterval(function(){
                 $this.slideAnimate(true);
-            }, 3000)
+            }, 6000)
         },
         clearAutoPlayTimer: function(){
             clearInterval(this.globalSlide);

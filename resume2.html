@@ -7,14 +7,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/base.css"/>
     <link rel="stylesheet" href="css/page_head.css"/>
-    <!--<link rel="stylesheet" href="css/common_index.css"/>-->
     <link rel="stylesheet" href="css/index2.css"/>
     <script src="js/lib/require.js" data-main="js/module/main2"></script>
     <style>
+        @media screen and (max-width: 1400px){
+            .skills,
+            .work{
+                height: 80% !important;
+                margin-top: 5% !important;
+            }
+            .projects ul{
+                column-count: 1 !important;
+                -webkit-column-count: 1 !important;;
+                /*column-width: 80;*/
+            }
+        }
         @media screen and (max-width: 960px){
             .ListItem-content{
                 height: 100%;
                 margin-top: 0;
+            }
+            .work p{
+                line-height: 20px !important;
+                width: 95% !important;
+                margin: 0 auto 5px 2.5% !important;
+            }
+            .work p span{
+                width: 75% !important;
+                margin: 0 auto 5px 12.5% !important;
             }
         }
         @media screen and (max-width: 628px){
@@ -38,6 +58,15 @@
             .budianDlg a{
                 width: 80%;
                 margin-left: 10%;
+            }
+
+            .project-item{
+                clear: left;
+                width: 80% !important;
+                margin-left: 10%;
+            }
+            .project-item a strong{
+                font-size: 20px!important;
             }
         }
     </style>
@@ -90,33 +119,117 @@
                         </div>
                     </li>
                     <li class="ListItem h_100 w_100  pa tc  bgd3">
-                        <div class="ListItem-content projects w_100 mbc bd1">
-                            <h3 class="ffMy fcWhite f36 fb  mt10">项目经验&nbsp;&nbsp;<span class="f12">无奈，公司项目都要求保密</span></h3>
-                            <div>
-                                <div class="w_100">
-                                    <strong>某社交App Lbs数据展示项目</strong>
-                                    <time>2014.3-2014.6， 2015.05-2015.06</time>
-                                    <strong>使用技术： Google Map相关API使用，html(5). css(3), highcharts饼图</strong>
-                                </div>
-                            </div>
+                        <div class="ListItem-content projects w_100 mbc">
+                            <h3 class="ffMy fcWhite f36 fb  mt10">项目经验&nbsp;&nbsp;<span class="f12 fn">抱歉，公司项目都要求保密</span></h3>
+                            <ul class="pr">
+                                <li class="project-item fcWhite ffMy fl">
+                                    <div class="tl">
+                                        <a href="https://github.com/IChocolateKapa/JingDongFood" class="no_unl fc209599 f23">
+                                            <strong>线上聊天</strong>
+                                        </a>&nbsp;&nbsp;
+                                        <time class="block fc999 f12">2015.08-至今</time>
+                                        <p class="fcccc f14">负责：整体&nbsp;&nbsp;使用：jquery，web存储等</p>
+                                        <p class=" f14">类似于线上聊天室，项目在持续开发中</p>
+                                        <!--<p class=" f14">2.主要是为了总结之前项目中用的技术，以及对新鲜技术的练习，</p>-->
+
+                                    </div>
+                                </li>
+                                <li class="project-item fcWhite ffMy fl">
+                                    <div class="tl">
+                                        <a href="https://github.com/IChocolateKapa/JingDongFood" class="no_unl fc209599 f23">
+                                            <strong>仿京东美食页面</strong>
+                                        </a>&nbsp;&nbsp;
+                                        <time class="block fc999 f12">2015.08-2015.08</time>
+                                        <p class="fcccc f14">负责：整体&nbsp;&nbsp;使用：jquery, less</p>
+                                        <p class=" f14">用less编写css样式，仿京东美食页面和样式以及动画</p>
+
+                                    </div>
+                                </li>
+                                <li class="project-item fcWhite ffMy fl">
+                                    <div class="tl">
+                                        <a href="https://github.com/IChocolateKapa/foreSeeImage" class="no_unl fc209599 f23">
+                                            <strong>图片预览插件ForSeeImage开发</strong>
+                                        </a>&nbsp;&nbsp;
+                                        <time class="block fc999 f12">2015.08-2015.08</time>
+                                        <p class="fcccc f14">负责：整体&nbsp;&nbsp;使用：jquery, require.js</p>
+                                        <p class=" f14">实现图片放大预览效果，分为require.js版本和单纯jquery版本</p>
+
+                                    </div>
+                                </li>
+                                <li class="project-item fcWhite ffMy fl">
+                                    <div class="tl">
+                                        <a href="https://github.com/IChocolateKapa/JingDongFood" class="no_unl fc209599 f23">
+                                            <strong>仿大街网登录页面</strong>
+                                        </a>&nbsp;&nbsp;
+                                        <time class="block fc999 f12">2015.07-2015.07</time>
+                                        <p class="fcccc f14">负责：整体页面和样式以及动画的编写</p>
+
+                                    </div>
+                                </li>
+
+                                <li class="project-item fcWhite ffMy fl">
+                                    <div class="tl">
+                                        <a href="https://github.com/IChocolateKapa/google-map-object" class="no_unl fc209599 f23"><strong>某社交App Lbs数据展示项目</strong></a>&nbsp;&nbsp;
+                                        <time class="block fc999 f12">2014.3-2014.6,2015.05-2015.06</time>
+                                        <p class="fcccc f14">负责：前端后端整站开发</p>
+                                        <p class="fcccc f14">使用： Google Map相关API使用，html(5). css(3), highcharts饼图</p>
+                                        <p class="f14">1.基于某著名社交App的LBS数据，设计mysql结构，进行实时存储抓取数据，使用mysql进行数据存储</p>
+                                        <p class="f14">2.用python+Flask框架，进行整套项目开发,包括多种条件的搜索，空间时间下数据在地图上的展示等</p>
+                                        <p class="f14">3.因项目不能公开，所以只提取了一些简单的demo在git上。</p>
+                                    </div>
+                                </li>
+
+                                <li class="project-item fcWhite ffMy fl">
+                                    <div class="tl">
+                                        <a href="https://github.com/IChocolateKapa/D3Extensionable" class="no_unl fc209599 f23">
+                                            <strong>某社交App的帐号养殖和任务分发系统</strong>
+                                        </a>&nbsp;&nbsp;
+                                        <time class="block fc999 f12">2015.03-2015.07</time>
+                                        <p class="fcccc f14">负责：前端后端整站开发</p>
+                                        <p class="fcccc f14">使用：html(5). css(3)，python, tornado,jquery, google map，mongoDb, Redis</p>
+                                        <p class=" f14">1.负责Axure原型图设计，mysql数据库设计，整体架构规划，项目前端和后端逻辑处理代码编写</p>
+                                        <p class=" f14">2.向任务服务器分发不同养殖任务，以及对任务回传结果的监控，具体养殖任务操作由同事进行开发；</p>
+                                        <p class=" f14">3.使用python+tornado框架进行项目开发</p>
+                                        <p class=" f14">4.通过对帐号的查询筛选熟悉了mongoDB和Redis数据库的使用</p>
+
+                                    </div>
+                                </li>
+
+
+                                <li class="project-item fcWhite ffMy fl">
+                                    <div class="tl">
+                                        <a href="https://github.com/IChocolateKapa/D3Extensionable" class="no_unl fc209599 f23"><strong>某著名国内被墙社交网站数据展示项目</strong></a>&nbsp;&nbsp;
+                                        <time class="block fc999 f12">2014.10-2014.12</time>
+                                        <p class="fcccc f14">负责：前端后端整站开发</p>
+                                        <p class="fcccc f14">使用： D3.js，html(5). css(3), Bootstrap, python, java,sql</p>
+                                        <p class=" f14">1.数据格式化存储</p>
+                                        <p class=" f14">2.用Bootstrap搭建前端框架，基于不同条件下的关键字进行模糊或者精确查询</p>
+                                        <p class=" f14">3.用d3.js进行对人物关系图谱展示，可动态拓展，可zoom,可drag</p>
+                                        <p class=" f14">4.项目地址是D3.js的Demo</p>
+
+                                    </div>
+                                </li>
+
+
+                            </ul>
 
                         </div>
                     </li>
                     <li class="ListItem h_100 w_100  pa tc  bgd4">
-                        <div class="ListItem-content work w_100 mbc bd1">
+                        <div class="ListItem-content work w_100 mbc">
                             <h3 class="ffMy fcWhite f36 fb  mt10">工作经历</h3>
                             <div class="w_100 ">
-                                <p class="ffMy fcWhite f18 lh32">
-                                    <span class="block fcWhite f18 fb">2013.01-2014.01年 北京容天汇海科技有限公司</span>
-                                    <span class="block fcWhite f14 txtInt20">职位： 软件开发工程师</span>
-                                    <span class="block fcWhite f14 txtInt20">工作简介：使用cuda进行对传统C语音代码的高性能改造</span>
-                                </p>
                                 <p class="ffMy fcWhite f18 lh32 mt16">
                                     <span class="block fcWhite f18 fb">2014.02-2015.07年 北京子衿晨风科技有限公司</span>
                                     <span class="block fcWhite f14 txtInt20">职位： 软件开发工程师</span>
                                     <span class="block fcWhite f14 txtInt20">工作简介：</span>
                                     <span class="block fcWhite f14 txtInt20">使用python语言开发了一些QT客户端，也封装了一些python的小工具。</span>
                                     <span class="block fcWhite f14 txtInt20">使用python的tornado和flask，以及java和servlets开发了多个web项目</span>
+                                </p>
+                                <p class="ffMy fcWhite f18 lh32">
+                                    <span class="block fcWhite f18 fb">2013.01-2014.01年 北京容天汇海科技有限公司</span>
+                                    <span class="block fcWhite f14 txtInt20">职位： 软件开发工程师</span>
+                                    <span class="block fcWhite f14 txtInt20">工作简介：使用cuda进行对传统C语音代码的高性能改造</span>
                                 </p>
                             </div>
                         </div>
@@ -151,6 +264,7 @@
                             <div class="w_100 ">
                                 <p class="ffMy fcWhite f18 lh32">web前端开发<strong class="fc209599">[非后端]</strong></p>
                                 <p class="ffMy fcWhite f18 lh32">工作地点：北京市朝阳区，最好是望京这边的</p>
+                                <p class="ffMy fcWhite f18 lh32">目前离职， 可快速到岗 </p>
                                 <p class="ffMy fcWhite f18 lh32">如果对我有兴趣，左侧边栏可联系到我 ^_^ </p>
                             </div>
                         </div>

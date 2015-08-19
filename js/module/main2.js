@@ -5,16 +5,22 @@
 require.config({
     paths: {
         jquery: "../lib/jquery-2.1.3.min",
-        event: "../common/common-event"
+        event: "../common/common-event",
+        watFal: "./waterFallFunction"
     }
 })
 
-require(['jquery', 'indexApp', 'event'], function($, iApp, EV){
+require(['jquery', 'indexApp', 'event', 'watFal'], function($, iApp, EV, wf){
     var indexApp = new iApp.indexFunc();
+    var watF = new wf.wf();
 
     var eve = EV.eventUtil;
 
-    //indexApp.autoSlide();
+    indexApp.autoSlide();
+    /*$(window).onload = watF.waterFall($(".project-item"), $(".projects ul"), $(".projects"));
+    $(window).resize(function(){
+        watF.waterFall($(".project-item"), $(".projects ul"), $(".projects"));
+    })*/
 
 
 
