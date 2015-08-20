@@ -69,14 +69,7 @@
   padding: 10px;
   left: 0;
   .transition-org(all .2s linear .1s);
-  .contact{
-    display: block;
-    width: 88%;
-    line-height: @sideBarBtnSize;
-    background: @sideBarClor;
-    text-indent: 10px;
-  }
-  a{
+  &:nth-of-type(1) a{
     display: block;
     width: 76%;
     background: @sideBarClor;
@@ -87,6 +80,13 @@
     &:hover{
       background: rgba(193, 71, 73, .9);
     }
+  }
+  .contact{
+    display: block;
+    width: 88%;
+    line-height: @sideBarBtnSize;
+    background: @sideBarClor;
+    text-indent: 10px;
   }
 }
 

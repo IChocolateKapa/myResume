@@ -9,6 +9,7 @@ define(['jquery', 'event'], function($, e){
     var indexFunc = function(){};
 
     indexFunc.globalSlide = null;
+    indexFunc.scrollFlag = true;
 
     indexFunc.prototype = {
         initLiPos: function($parentObj){
@@ -21,14 +22,18 @@ define(['jquery', 'event'], function($, e){
             })
         },
 
-
-        moveSectionUp: function(event){
-
+        truerifyFlag: function(){
+            this.scrollFlag = true;
         },
-        moveSectionDown: function(){
-
+        falserifyFlag: function(){
+            this.scrollFlag = false;
+        },
+        getFlag: function(){
+            return this.scrollFlag;
         },
         slideAnimate: function(flag){
+            this.truerifyFlag();
+
             var curIndex = $(".slideTrigger li.curr").index();
             if(flag){
                 var nextIndex = curIndex + 1;
@@ -44,6 +49,7 @@ define(['jquery', 'event'], function($, e){
             $(".ListItem").removeClass("curr").eq(nextIndex).addClass("curr");
             $(".slideTrigger li").removeClass("curr").eq(nextIndex).addClass("curr");
         },
+
         autoSlide: function(){
             var $this = this;
             this.globalSlide = window.setInterval(function(){

@@ -12,6 +12,7 @@ require.config({
 
 require(['jquery', 'indexApp', 'event', 'watFal'], function($, iApp, EV, wf){
     var indexApp = new iApp.indexFunc();
+    indexApp.truerifyFlag();
     var watF = new wf.wf();
 
     var eve = EV.eventUtil;
@@ -90,17 +91,25 @@ require(['jquery', 'indexApp', 'event', 'watFal'], function($, iApp, EV, wf){
     })
 
     /*在项目经验中需要取消鼠标滚轮的事件冒泡*/
-    $(".projects").on("mousewheel DOMMouseScroll", function(e){
+    $(".projects ul").on("mousewheel DOMMouseScroll", function(e){
         eve.stopPropagation(event);
     })
 
+    //eve.addHandler(".slide", "mousewheel DOMMouseScroll", MouseWheelHandler);
     $(".slide").on("mousewheel DOMMouseScroll", MouseWheelHandler);
 
     function MouseWheelHandler(e){
-        var ifNext = indexApp.getScrollDirection(e);
-        setTimeout(function(){
-            indexApp.slideAnimate(ifNext);
-        }, 600)
+        var flag = indexApp.getFlag();
+        if(flag){
+            setTimeout(function(){
+                var ifNext = indexApp.getScrollDirection(e);
+                indexApp.slideAnimate(ifNext);
+            }, 800);
+
+            indexApp.falserifyFlag();
+        }
+
+
     }
 
 })
