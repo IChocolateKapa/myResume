@@ -55,14 +55,7 @@
   -ms-transition: all 0.2s linear 0.1s;
   -o-transition: all 0.2s linear 0.1s;
 }
-.budianDlg .contact {
-  display: block;
-  width: 88%;
-  line-height: 50px;
-  background: #c14749;
-  text-indent: 10px;
-}
-.budianDlg a {
+.budianDlg:nth-of-type(1) a {
   display: block;
   width: 76%;
   background: #c14749;
@@ -71,8 +64,15 @@
   vertical-align: middle;
   margin-left: calc(12%);
 }
-.budianDlg a:hover {
+.budianDlg:nth-of-type(1) a:hover {
   background: rgba(193, 71, 73, 0.9);
+}
+.budianDlg .contact {
+  display: block;
+  width: 88%;
+  line-height: 50px;
+  background: #c14749;
+  text-indent: 10px;
 }
 /*右侧*/
 .slide {

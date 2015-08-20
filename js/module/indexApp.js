@@ -10,6 +10,7 @@ define(['jquery', 'event'], function($, e){
 
     indexFunc.globalSlide = null;
     indexFunc.scrollFlag = true;
+    indexFunc.prototype.scroll = true;
 
     indexFunc.prototype = {
         initLiPos: function($parentObj){

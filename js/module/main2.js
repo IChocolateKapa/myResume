@@ -95,9 +95,10 @@ require(['jquery', 'indexApp', 'event', 'watFal'], function($, iApp, EV, wf){
         eve.stopPropagation(event);
     })
 
-    //eve.addHandler(".slide", "mousewheel DOMMouseScroll", MouseWheelHandler);
+    //eve.addHandler($(".slide"), "mousewheel DOMMouseScroll", MouseWheelHandler);
     $(".slide").on("mousewheel DOMMouseScroll", MouseWheelHandler);
 
+    /*利用延迟和开关就能控制滚轮事件*/
     function MouseWheelHandler(e){
         var flag = indexApp.getFlag();
         if(flag){
@@ -105,11 +106,7 @@ require(['jquery', 'indexApp', 'event', 'watFal'], function($, iApp, EV, wf){
                 var ifNext = indexApp.getScrollDirection(e);
                 indexApp.slideAnimate(ifNext);
             }, 800);
-
             indexApp.falserifyFlag();
         }
-
-
     }
-
 })
